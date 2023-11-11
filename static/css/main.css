@@ -1,0 +1,847 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
+
+:root {  
+  --color-main0:rgb(239, 239, 239)d;
+  --color-main: #71c6dd;
+  --color-main1: #23eb69;
+
+  --color-main-light: #e1f6fb;
+  --color-dark: #2e846f;
+  --color-dark-medium: #0e7f57;
+  --color-dark-light: #42926c;
+  --color-light: #ffffff;
+
+  --color-gray: #8b8b8b;
+  --color-light-gray: #b2bdbd;
+  --color-bg: #2d2d39;
+  --color-success: #5dd693;
+  --color-error: #fc4b0b;
+}
+
+
+
+
+
+body{
+	background-color: hsl(0, 0%, 98%);
+}
+
+h1,h2,h3,h4,h5,h6{
+	color:hsl(0, 0%, 30%);
+}
+
+.user-info {
+  font-size: 80%;
+}
+.box-element {
+	box-shadow:hsl(0, 0%, 80%) 0 0 16px;
+	background-color: #fff;
+	border-radius: 4px;
+  margin: 2rem;
+}
+.box-elements{
+	box-shadow:hsl(0, 0%, 80%) 0 0 16px;
+	background-color: #fff;
+	border-radius: 4px;
+  max-height: 80%;
+  overflow: scroll;
+	padding: 10px;
+  margin-right: 2rem;
+}
+
+/* Style the scrollbar track */
+.box-elements::-webkit-scrollbar {
+  width: 12px; /* Set the width of the scrollbar */
+}
+
+/* Style the scrollbar handle */
+.box-elements::-webkit-scrollbar-thumb {
+  background-color: #6c757d; /* Set the color of the scrollbar handle */
+  border-radius: 6px; /* Set the border-radius of the scrollbar handle */
+}
+
+/* Style the scrollbar track when the handle is being hovered */
+.box-elements::-webkit-scrollbar-thumb:hover {
+  background-color: #495057; /* Set the color on hover */
+}
+
+/* Style the scrollbar track */
+.box-elements::-webkit-scrollbar-track {
+  background-color: #f8f9fa; /* Set the color of the scrollbar track */
+  border-radius: 8px; /* Set the border-radius of the scrollbar track */
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow to the track */
+}
+
+.thumbnail{
+  width: 50%;
+  border-radius: 4px;
+  border: 1px black;
+  padding: 5px;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+	-webkit-box-shadow: -1px -3px 5px -2px rgba(214,214,214,1);
+    -moz-box-shadow: -1px -3px 5px -2px rgba(214,214,214,1);
+    box-shadow: -1px -3px 5px -2px rgba(214,214,214,1);
+}
+
+.product-show {
+  border-radius: 0 0 4px 4px;
+  display: flex;  /* Use flexbox */
+  flex-direction: column;  /* Stack items vertically */
+  align-items: center;  /* Center items horizontally */
+  justify-content: center;  /* Center items vertically */
+}
+.product{
+	border-radius: 0 0 4px 4px;
+}
+.bg-dark{
+	background-color: #4f868c!important;
+}
+
+#cart-icon{
+	width:25px;
+	display: inline-block;
+	margin-left: 15px;
+}
+
+#cart-total{
+	display: block;
+	text-align: center;
+	color:#fff;
+	background-color: red;
+	width: 20px;
+	height: 25px;
+	border-radius: 50%;
+	font-size: 14px;
+}
+
+.col-lg-4, .col-lg-6, .col-lg-8, .col-lg-12{
+	margin-top: 10px;
+  height: 50%;
+}
+
+.btn{
+	border-radius: 0;
+}
+
+.row-image{
+	width: 100px;
+}
+
+.form-field{
+	width:250px;
+	display: inline-block;
+	padding: 5px;
+  font-size: 2rem;
+}
+
+.cart-row{
+	display: flex;
+  align-items: flex-stretch;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ececec;
+
+}
+
+.quantity{
+	display: inline-block;
+	font-weight: 700;
+	padding-right:10px;
+	
+
+}
+
+.chg-quantity{
+	width: 12px;
+	cursor: pointer;
+	display: block;
+	margin-top: 5px;
+	transition:.1s;
+}
+
+.chg-quantity:hover{
+	opacity: .6;
+}
+
+
+.hidden{
+	display: none!important;
+}
+
+.image {
+	  width: 60%;
+	  min-height: 380px;
+    border: none;  /* Remove border */
+    outline: none;  /* Remove outline */
+    border-radius: 4px;
+    padding: 5px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Header Section */
+.header {
+  background-color: var(--color-dark);
+  height: 100%;
+  padding: 1.5rem;
+  width: 100%;
+}
+
+.header > .container {
+  display: flex;
+  gap: 9.5rem;
+  justify-content: space-between;
+}
+
+.header__user {
+  display: flex;
+  margin-right: 2rem;
+}
+.header__user a{
+  justify-content: space-between;
+
+}
+
+/* ... (rest of your styles) ... */
+
+/* Media Queries */
+@media screen {
+  .box-element,
+  .form-control {
+    font-size: 16px;
+  }
+
+  html {
+    font-size: 70%;
+    font-weight: 800;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .header > .container {
+    gap: 3rem;
+  }
+
+  .header__search input {
+    width: 20rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .header__logo h1 {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .header__search {
+    display: none;
+  }
+}
+.header__logo {
+  align-items: center;
+}
+
+
+
+
+
+
+
+
+.header__menu {
+  display:flex;
+}
+
+.header__menu a { 
+  display: flex;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--color-bg);
+}
+
+
+.header__menu img {
+  height: 3.6rem;
+  margin-left: 2rem;  
+}
+
+
+.header__menu span {
+  color: var(--color-main);
+  font-weight: 500;
+  font-size: 1.4rem;
+  display: block;
+}
+
+.header__menu svg {
+  width: 1.6rem;
+  height: 1.6rem;
+  fill: var(--color-dark-light);
+}
+
+
+/*==============================
+=>  Profile
+================================*/
+.profile {  
+  margin-left: 30rem;
+  background-color: var(--color-dark-light);
+}
+.profile,
+.update-account,
+.cart {
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+  padding: 2rem;
+  height: 80vh; /* Set a minimum height to center vertically on the page */
+  width: 50vh;
+  border-radius: 1rem;
+}
+
+.profile__avatar {
+  text-align: center;
+}
+
+.profile__info {
+  text-align: center;
+}
+
+.profile__info h3 {
+  font-size: 2rem;
+  color: var(--color-light);
+  font-weight: 400;
+}
+
+.profile__info p {
+  color: var(--color-main);
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.profile__about {
+    margin-top: 2rem;
+}
+
+.profile__about h3 {
+  text-transform: uppercase;
+  color: var(--color-bg);
+  margin-bottom: 0.5rem;
+}
+
+.profile__about p {
+  color: var(--color-light);
+  margin-bottom: 0.5rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*========== components ==========*/
+
+.container a{
+  outline: none;
+  text-decoration: none;
+  
+}
+.container h1{
+  color: #eef4f2;
+}
+
+.btn {
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  transition: all ease-in-out 0.3s;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.15);
+  font-weight: 500;
+}
+
+.btn--link {
+  border-radius: 0;
+  padding: 0;
+  color: var(--color-main);
+  box-shadow: none;
+}
+
+.btn--link:hover {
+  text-decoration: underline;
+}
+
+.btn--main {
+  background-color: var(--color-main1);
+  color: var(--color-dark);
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.btn--dark {
+  background-color: var(--color-dark-light);
+  color: var(--color-light);
+}
+
+.btn > svg {
+  fill: currentColor;
+  width: 1.6rem;
+  height: 1.6rem;
+}
+
+.btn--pill {
+  border-radius: 10rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  padding: 6px 2.5rem;
+  color: var(--color-main);
+  background: transparent;
+  border: 2px solid var(--color-main);
+}
+
+.action-button {
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.avatar {
+  position: relative;
+  display: inline-block;
+  border-radius: 50%;
+}
+
+.avatar img {
+  display: block;
+  border-radius: 50%;
+}
+
+.avatar::after {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: var(--color-gray);
+  z-index: 111;
+  border-radius: 50%;
+  border: 0.3rem solid var(--color-dark);
+}
+
+.avatar.active::after {
+  background-color: var(--color-success);
+}
+
+.avatar.avatar--small img { 
+  width: 2.8rem;
+  height: 2.8rem;
+}
+
+.avatar.avatar--small:after {
+  width: 0.7rem;
+  height: 0.7rem;
+  bottom: 0px;
+  right: -6px;
+}
+
+.avatar.avatar--medium img {
+  width: 3.6rem;
+  height: 3.6rem;
+  border-radius: 50%;
+}
+
+.avatar.avatar--medium:after {
+  width: 1.5rem;
+  height: 1.5rem;
+  bottom: 0px;
+  right: -7px;
+}
+
+.avatar.avatar--large img {
+  display: block;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+}
+
+.avatar.avatar--large:after {
+  width: 1rem;
+  height: 1rem;
+  bottom: 2px;
+  right: 3.5px;
+}
+
+.button-group {
+  display: flex;
+  align-items: center;
+}
+
+.button-group button,
+.button-group a {
+  margin-right: 10px; /* Adjust the margin between buttons */
+}
+
+.button-group h4 {
+  margin-left: auto; /* Push the price to the right end */
+}
+
+/*========== Layout Box ==========*/
+
+.layout__box {
+  width: 90%;
+  max-width: 48rem;
+  min-height: 40rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -46%);
+  background-color: var(--color-dark);
+  border-radius: 1rem;
+  box-shadow: 1px 1px 6px 3px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.layout__boxHeader {
+  display: flex;
+  padding: 1.5rem;
+  background-color: var(--color-dark-light);
+}
+
+.layout__boxTitle {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.layout__boxTitle h3 {
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--color-light);
+}
+
+.layout__boxTitle svg {
+  width: 1.6rem;
+  height: 1.6rem;
+  fill: var(--color-main);
+}
+
+.layout__body {
+  margin: 3rem;
+  font-size: 1rem;
+}
+
+
+.dropdown_menu {
+  z-index: 111;
+  position: absolute;
+  top: 7rem;
+  right: 18rem;
+  background: var(--color-dark-light);
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  display: none;
+}
+
+.dropdown_menu.show {
+  display: block;
+}
+
+.dropdown_menu a {
+  padding: 1.2rem 4rem;
+  display: block;
+  color: var(--color-light) !important;
+  font-weight: 500;
+  font-size: 1.4rem;
+}
+
+.dropdown_menu a:hover {
+  background-color: var(--color-dark-medium);
+}
+
+.dropdown_menu > a:not(:last-child) {
+  border-bottom: 1px solid var(--color-dark-medium);
+}
+
+.dropdown_menu a svg {
+  fill: var(--color-light);
+  outline: none;
+}
+
+.dropdown-button {
+  background: transparent;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+}
+
+.dropdown-button:hover svg {
+  fill: var(--color-main0);
+}
+.dropdown-button svg {
+  background: transparent;
+}
+
+
+.dropdown-button:focus {
+  outline: none;
+}
+
+
+
+.auth__tagline {
+  text-align: center;
+  margin-bottom: 3rem;
+  color: var(--color-main);
+  font-weight: 500;
+  font-size: 1.8rem;
+}
+.auth .layout__boxHeader {
+  text-align: center;
+  justify-content: center;
+}
+
+.auth__action {
+  margin-top: 3rem;
+  text-align: center;
+}
+/*==============================
+=>  Forms
+================================*/
+
+.form__group {
+  margin-bottom: 2rem;
+  width: 100%;
+  font-size: 1rem;
+}
+
+.form__split {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.form__group label {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.form__group input,
+.form__group textarea,
+.form__group select {
+  background: transparent;
+  border: 1px solid var(--color-dark-light);
+  padding: 1rem;
+  border-radius: 3px;
+  width: 100%;
+  color: var(--color-light);
+  font-weight: 500;
+  outline: none;
+}
+.form__group a {
+  color: #dadaee;
+}
+
+.form__group input:focus,
+.form__group textarea:focus {
+  border-color: var(--color-main);
+}
+
+.form__group textarea {
+  background: transparent;
+  height: 10rem;
+  resize: none;
+}
+
+.form__group select {
+  color: var(--color-light);
+  font-weight: 400;
+}
+
+.form__group select option {
+  background-color: var(--color-dark-light);
+  color: var(--color-light);
+  padding: 0 10rem;
+}
+
+.form__action {
+  display: flex;
+  justify-content: flex-end;
+  gap: 3rem;
+}
+
+.form__hide {
+  position: absolute;
+  left: -9999px;
+}
+
+.form__avatar label {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: var(--color-main);
+  cursor: pointer;
+}
+
+.form__avatar label:hover {
+  text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Add this to your main CSS file or create a new CSS file and link it in your HTML */
+
+footer {
+  background-color: #343a40; /* Dark background color */
+  color: #fff; /* Text color */
+  padding: 30px 2rem;
+}
+
+footer h5 {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+footer p {
+  margin: 0; /* Remove default margin */
+}
+
+/* Quick Links styling */
+
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer ul li {
+  margin-bottom: 10px;
+}
+
+footer a {
+  color: #dadaee;
+  text-decoration: none;
+}
+
+footer a:hover {
+  font-size: 1.5rem;  
+}
+#facebook:hover {
+  color: #3B5998;
+}
+#twitter:hover {
+  color: #040405;
+}
+#instagram:hover {
+  color: rgb(213, 107, 229);
+}
+
+/* Follow Us styling */
+
+footer i {
+  font-size: 24px; /* Adjust the font size as needed */
+  margin-right: 15px;
+}
+
+/* Color social media icons on hover */
+
+footer i:hover {
+  opacity: 0.7;
+}
+
+
+/* Responsive adjustments */
+
+@media (max-width: 768px) {
+  footer {
+      text-align: center;
+  }
+
+  footer .col-md-4 {
+      margin-bottom: 30px;
+  }
+}

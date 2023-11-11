@@ -1,0 +1,27 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-lg-8">
+            <div class="box-element">
+                <div class="product-show">
+                    <h6><strong>{{product.title}}</strong></h6>
+                    <hr>
+                    <img src="{{product.imageURL}}" class="thumbnail">              
+                </div>
+                <hr>
+                <button data-product={{product.id}} data-action="add" class="btn btn-outline-secondary add-btn update-cart">Add to cart</button>
+                <h4 style="display: inline-block; float: right;"><strong>${{product.price|floatformat:2}}</strong></h4>
+                <hr>
+                <h2>About this item</h2>
+                <ul>
+                    {% for item in product_desc_list %}
+                        <li>{{ item }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            
+        </div>
+    </div>
+{% endblock content %}
