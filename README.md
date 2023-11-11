@@ -23,3 +23,7 @@ This is a Django-based Ecommerce project for building an online store.
 
 
 Your application should be accessible at http://localhost:8000/.
+
+## Quick Demo:
+
+[Uploading ecom.webm…]()
