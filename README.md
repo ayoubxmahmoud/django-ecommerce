@@ -26,4 +26,4 @@ Your application should be accessible at http://localhost:8000/.
 
 ## Quick Demo:
 
-[Uploading ecom.webm…]()
+[ecom.webm](https://github.com/Ayoubx01/django-ecommerce/assets/116462151/3c0d9c24-4e19-4c5d-bc0b-3e32db29ee09)
